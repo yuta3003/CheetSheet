@@ -1,0 +1,26 @@
+version: "3.7"
+
+services:
+  redmine:
+    image: redmine:4.0.4
+    container_name: redmine
+    restart: always
+    ports:
+      - "3000:3000"
+    volumes:
+      - "$PWD/data/plugins:/usr/src/redmine/plugins"
+      - "$PWD/data/themes:/usr/src/redmine/public/themes"
+    environment:
+      REDMINE_DB_MYSQL: redmine-db
+      REDMINE_DB_PASSWORD: redmine
+
+  redmine-db:
+    image: mariadb:10.4
+    container_name: redmine-db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: redmine
+      MYSQL_DATABASE: redmine
+    volumes:
+      - "$PWD/data/db:/var/lib/mysql"
+    command: mysqld --character-set-server=utf8 --collation-server=utf8_unicode_ci
