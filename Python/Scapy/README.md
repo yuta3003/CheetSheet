@@ -1,16 +1,20 @@
 # Scapy
 
-## パッケージインストール
+- [install](#install)
+- [import](#import)
+- [create Packet](#create-packet)
+
+## install
 ```sh
 pip install scapy
 ```
 
-## インポート
+## import
 ```python
 from scapy.all import *
 ```
 
-## パケット生成
+## create Packet
 
 ```Python
 """
@@ -25,7 +29,8 @@ from scapy.all import *
     - Dst port: 4321
     - Flag: SYN
 """
-# 上記のようなパケットを作成する場合
+# The protocol is defined as a class.
+# Multiple layers of packets can be created by separating them with /.
 
 Ether()/IP()/TCP()
 packet = (Ether(src="11:11:11:11:11:11",dst="11:11:11:11:11:11")

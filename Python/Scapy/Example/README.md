@@ -1,3 +1,7 @@
+- [Scan with ARP](#scan-with-arp)
+- [ARPSpoofing](#ARPSpoofing)
+- [Scan with ICMP](#Scan-with-ICMP)
+
 ## Scan with ARP
 
 ```Python
@@ -7,8 +11,8 @@ from scapy.all import srp
 import ipaddress
 
 def main():
-    myip = input("What is Your IP ?:")
-    netmask = input("What is SubnetMask ?:")
+    myip = input("What is Your IP?:")
+    netmask = input("What is SubnetMask?:")
     hwaddr = 'ff:ff:ff:ff:ff:ff'
 
     cidr = gen_cidr(myip, netmask)
@@ -36,7 +40,7 @@ if __name__ == '__main__':
 
 ```
 
-## ARPSproofing
+## ARPSpoofing
 
 ```Python
 from scapy.all import *
