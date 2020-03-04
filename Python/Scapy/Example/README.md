@@ -163,8 +163,8 @@ from scapy.all import sr1
 import ipaddress
 
 def main():
-    myip = input("What is Your IP ?:")
-    netmask = input("What is SubnetMask ?:")
+    myip = input("What is Your IP?:")
+    netmask = input("What is SubnetMask?:")
 
     ip_list = gen_iplist(myip, netmask)
 
