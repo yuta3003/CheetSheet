@@ -151,6 +151,8 @@ python run.py
 ```
 
 ## Deploy on Heroku
+[Heroku 公式チュートリアル](https://devcenter.heroku.com/articles/getting-started-with-python)  
+[Pythonで始めるHeroku 2018 -qiita](https://qiita.com/torukashima/items/0d6d00d0186b153d5e45)
 ### code
 #### Procfile
 Heroku設定用ファイルProcfileを編集
