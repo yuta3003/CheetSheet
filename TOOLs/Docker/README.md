@@ -16,6 +16,11 @@ docker rm CONTEINNER_ID     # コンテナの削除
 docker rmi IMAGE_ID         # イメージの削除
 docker image inspect IMAGE_ID   # イメージの詳細表示
 docker run CONTEINNER_ID        # コンテナ起動
+
+docker save {image} > {tar_file}    # Dockeriamgeをtarファイルへ変換
+docker load < {tar_file}    # tarファイルをDockerimageへ変換
+
+docker inspect <コンテナID> # Dockerコンテナの情報を表示
 ```
 
 ## Create DockerImage from Dockerfile.
